@@ -25,12 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/screenshot_one.png)
+![](./design/screenshot_two.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/profile/purvjadh)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+- Live Site URL: [site URL here](https://your-live-site-url.com)
 
 ## My process
 
