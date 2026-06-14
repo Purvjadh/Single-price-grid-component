@@ -1,0 +1,207 @@
+:root{
+
+    --clr-bg-light:hsl(179, 62%, 60%);
+    --clr-bg-primary:hsl(179, 62%, 43%);
+    /* --clr-text-primary:hsl(179, 62%, 43%); */
+    --clr-btn-primary:hsl(71, 73%, 54%);
+    --clr-bg-neutral: hsl(204, 43%, 93%);
+    --clr-para-neutral:hsl(218, 22%, 67%);
+    
+    --fs-small:16px;
+    --fw-base:400;
+    --fw-bold:700;
+
+    --ff-karla:"Karla", sans-serif;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+
+  font-family: var(--ff-karla);
+  font-size: 1rem;
+  background-color: var(--clr-bg-neutral);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base-padding{
+  padding: 1.5rem 1rem;
+}
+
+.card{
+   
+    border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
+    display: grid;
+    box-shadow: 2px 2px 10px 4px rgba(226, 218, 218, 0.822);
+    max-width: 80%;
+    
+}
+
+.gap{
+   gap:0.5rem;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+}
+
+.community{
+    background-color: hsl(0, 0%, 100%);
+     border-radius: 0.625rem 0.625rem 0 0;
+    
+}
+
+.subscription{
+    background-color: var(--clr-bg-primary);
+    color:hsl(0, 0%, 100%);
+}
+
+.why_us{
+    background-color: var(--clr-bg-light);
+    color:hsl(0, 0%, 100%);
+     border-radius:  0 0 0.625rem 0.625rem;
+}
+
+.community p:first-child{
+    color: var(--clr-bg-primary);
+    
+}
+
+.first-child-style{
+    font-weight:var(--fw-bold);
+    font-size: 0.925rem;
+    
+}
+
+.community p:nth-child(2){
+    color: var(--clr-btn-primary);
+    font-weight: var(--fw-bold);
+    font-size: 0.825rem;
+}
+
+.community p:last-child{
+    color:var(--clr-para-neutral);
+    font-size: 0.625rem;
+    line-height: 2;
+}
+
+.subscription p:first-child{
+    font-weight:var(--fw-bold);
+    font-size: 0.925rem;
+}
+
+.price__section{
+  display: flex;
+  flex-direction: row;
+  font-size: 0.725rem;
+  align-items: center;
+  gap:0.825rem;
+}
+
+.price__section p:first-child{
+  font-size: 1.5rem;
+}
+
+.price__section p:last-child{
+  font-weight:lighter;
+  
+}
+
+.subscription p:nth-child(3){
+  font-size: 0.725rem;
+}
+
+.btn{
+  background-color: var(--clr-btn-primary);
+  border: none;
+  color: var(--clr-bg-neutral);
+  font-size: 0.825rem;
+  border-radius: 0.2em;
+  padding-top:0.425rem ;
+  padding-bottom:0.425rem ;
+  
+}
+
+.why_us{
+  font-size: 0.725rem;
+  font-weight: 100;
+}
+
+@media(min-width:40em){
+  .card{
+    grid-template-columns:repeat(2,1fr);
+    max-width: 40%;
+  }
+
+  .community{
+    grid-column: span 2;
+  }
+
+  .subscription{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .why_us{
+    background-color: var(--clr-bg-light);
+    color:hsl(0, 0%, 100%);
+    border-radius:  0 0  0.625rem 0;
+}
+
+  
+}
+
+
+
