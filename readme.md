@@ -26,7 +26,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./design/screenshot_one.png)
-![](./design/screenshot_two.png)
+![](./design/screenshot_two.jpeg)
 
 ### Links
 
